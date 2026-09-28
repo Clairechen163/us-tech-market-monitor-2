@@ -1,6 +1,6 @@
 # Latest Market Signals
 
-**Last updated:** 20260926
+**Last updated:** 20260928
 
 | KLAC | SPCX | VRT |
 |---|---|---|
@@ -13,9 +13,9 @@
 | NVDA | -- | -- | -- | -- | -- | WAITING |
 | AMD | -- | -- | -- | -- | -- | WAITING |
 | INTC | -- | -- | -- | -- | -- | WAITING |
-| KLAC | 187.92 | +0.43% | 0.74 | 54.1 | 46 | WATCH |
+| KLAC | 189.17 | +0.67% | 0.91 | 55.2 | 59 | WATCH |
 | MRVL | -- | -- | -- | -- | -- | WAITING |
-| VRT | 253.28 | +3.25% | 0.77 | 47.9 | 7 | WEAK |
+| VRT | 244.04 | -3.65% | 0.79 | 43.7 | 0 | WEAK |
 
 ## Signal definitions
 
