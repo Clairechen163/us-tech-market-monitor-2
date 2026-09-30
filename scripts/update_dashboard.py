@@ -10,7 +10,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 BADGE_DIR = ROOT / "docs" / "badges"
 DASHBOARD = ROOT / "docs" / "dashboard.md"
-TICKERS = ["NVDA", "AMD", "INTC", "KLAC", "MRVL", "VRT"]
+TICKERS = ["KLAC", "ALAB", "SPCX", "TSLA", "VRT"]
 
 COLORS = {
     "STRONG PRICE/VOLUME": "#2da44e",
@@ -91,12 +91,15 @@ def main() -> None:
         "",
         f"**Last updated:** {updated}",
         "",
-        "| KLAC | SPCX | VRT |",
-        "|---|---|---|",
-        *[f"| ![{t}]({{}})" for t in []],
+        "| " + " | ".join(TICKERS) + " |",
+        "|" + "---|" * len(TICKERS),
+        "| " + " | ".join(f"![{t}](badges/{t}.svg)" for t in TICKERS) + " |",
+        "",
+        "## Metrics",
+        "",
+        "| Ticker | Close | Day % | RVOL20 | RSI14 | Score | Signal |",
+        "|---|---:|---:|---:|---:|---:|---|",
     ]
-    badge_cells = [f"![{t}](badges/{t}.svg)" for t in TICKERS]
-    lines = lines[:6] + ["| " + " | ".join(badge_cells) + " |", "", "## Metrics", "", "| Ticker | Close | Day % | RVOL20 | RSI14 | Score | Signal |", "|---|---:|---:|---:|---:|---:|---|"]
     for ticker, values, score, label in rows:
         lines.append(
             f"| {ticker} | {values['close']} | {values['day_change_pct']} | {values['rvol20']} | {values['rsi14']} | {score} | {label} |"

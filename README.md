@@ -9,15 +9,9 @@ A transparent, rules-based daily market monitor for U.S. technology and semicond
 These signal badges are regenerated automatically after each scheduled end-of-session run.
 
 
-| NVDA                                                                                                                                                                   | AMD                                                                                                                                                                  | INTC                                                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![NVDA](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/a3fcbb9f-4ae2-4501-b7c4-7995d0ca81fc_us-tech-market-monitor-github-v2.zip.1fc/docs/badges/NVDA.svg) | ![AMD](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/a3fcbb9f-4ae2-4501-b7c4-7995d0ca81fc_us-tech-market-monitor-github-v2.zip.1fc/docs/badges/AMD.svg) | ![INTC](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/a3fcbb9f-4ae2-4501-b7c4-7995d0ca81fc_us-tech-market-monitor-github-v2.zip.1fc/docs/badges/INTC.svg) |
-
-
-
-| KLAC                                                                                                                                                                   | MRVL                                                                                                                                                                   | VRT                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![KLAC](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/a3fcbb9f-4ae2-4501-b7c4-7995d0ca81fc_us-tech-market-monitor-github-v2.zip.1fc/docs/badges/KLAC.svg) | ![MRVL](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/a3fcbb9f-4ae2-4501-b7c4-7995d0ca81fc_us-tech-market-monitor-github-v2.zip.1fc/docs/badges/MRVL.svg) | ![VRT](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/a3fcbb9f-4ae2-4501-b7c4-7995d0ca81fc_us-tech-market-monitor-github-v2.zip.1fc/docs/badges/VRT.svg) |
+| KLAC                                                                                                                                                                                 | ALAB                                                                                                                                                                                 | SPCX                                                                                                                                                                                 | TSLA                                                                                                                                                                                 | VRT                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![KLAC](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/515a4975-f270-4ee7-95af-6918fd35047a_us-tech-market-monitor-KLAC-ALAB-SPCX-TSLA-VRT.zip.47a/docs/badges/KLAC.svg) | ![ALAB](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/515a4975-f270-4ee7-95af-6918fd35047a_us-tech-market-monitor-KLAC-ALAB-SPCX-TSLA-VRT.zip.47a/docs/badges/ALAB.svg) | ![SPCX](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/515a4975-f270-4ee7-95af-6918fd35047a_us-tech-market-monitor-KLAC-ALAB-SPCX-TSLA-VRT.zip.47a/docs/badges/SPCX.svg) | ![TSLA](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/515a4975-f270-4ee7-95af-6918fd35047a_us-tech-market-monitor-KLAC-ALAB-SPCX-TSLA-VRT.zip.47a/docs/badges/TSLA.svg) | ![VRT](vscode-file://vscode-app/c:/Users/admin/AppData/Local/Temp/515a4975-f270-4ee7-95af-6918fd35047a_us-tech-market-monitor-KLAC-ALAB-SPCX-TSLA-VRT.zip.47a/docs/badges/VRT.svg) |
 
 
 **Open the full dashboard →**
@@ -46,13 +40,13 @@ It is a **monitoring and research tool**, not a trading system and not proof of 
 - Human-readable daily report
 - CSV output for further analysis
 - GitHub Actions automation after the U.S. regular session
-- README badges and a dashboard for six tracked names: `KLAC`, `SPCX`, `VRT`
+- README badges and a dashboard for five tracked names: `KLAC`, `ALAB`, `SPCX`, `TSLA`, `VRT`
 
 
 
 ## Default universe
 
-`KLAC`, `SPCX`, `VRT`
+`KLAC`, `ALAB`, `SPCX`, `TSLA`, `VRT`
 
 The monitor can easily be customized by editing `TICKERS` in `market_monitor.py`.
 
@@ -85,7 +79,7 @@ These labels describe the model's inputs. They are **not buy/sell recommendation
 ## Run locally
 
 ```bash
-git clone https://github.com/Clairechen163/us-tech-market-monitor.git
+git clone https://github.com/clairechen163/us-tech-market-monitor.git
 cd us-tech-market-monitor
 
 python -m venv .venv
@@ -106,20 +100,30 @@ The dashboard updater reads the latest CSV and generates:
 
 - `docs/dashboard.md`
 - `docs/badges/KLAC.svg`
+- `docs/badges/ALAB.svg`
 - `docs/badges/SPCX.svg`
+- `docs/badges/TSLA.svg`
 - `docs/badges/VRT.svg`
 
 
 
 ## GitHub Actions
 
-The workflow runs on weekdays after the U.S. regular session. It runs the market monitor, updates the six signal badges/dashboard, and commits changed dashboard assets back to the repository.
+The workflow runs on weekdays after the U.S. regular session. It runs the market monitor, updates the five signal badges/dashboard, and commits changed dashboard assets back to the repository.
 
 GitHub Actions uses UTC. The schedule is intentionally set late enough to be after the 16:00 ET close during both daylight-saving and standard-time periods.
 
 You can also run it manually from:
 
 **GitHub → Actions → Daily Market Monitor → Run workflow**
+
+### One-time setup
+
+Replace `YOUR_USERNAME` in the workflow-status badge URL near the top of this README with your GitHub username or organization name.
+
+The workflow-status badge is separate from the five market-signal badges: GitHub's native status badge reports whether the workflow is passing/failing, while the five local SVGs report the latest model signal.
+
+If your repository uses branch protection, make sure GitHub Actions is permitted to push the generated dashboard files.
 
 ## Example interpretation
 

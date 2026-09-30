@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="28" role="img" aria-label="INTC signal WAITING">
-  <title>INTC signal: WAITING | Score: -- | Updated: 20260929</title>
-  <rect width="220" height="28" rx="4" fill="#f6f8fa"/>
-  <rect x="0" y="0" width="156" height="28" rx="4" fill="#24292f"/>
-  <rect x="156" y="0" width="64" height="28" rx="4" fill="#57606a"/>
-  <text x="78" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#fff">INTC  WAITING</text>
-  <text x="188" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#fff">--</text>
-</svg>
