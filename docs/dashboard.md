@@ -1,6 +1,6 @@
 # Latest Market Signals
 
-**Last updated:** 20261005
+**Last updated:** 20261006
 
 | KLAC | ALAB | SPCX | TSLA | VRT |
 |---|---|---|---|---|
@@ -10,11 +10,11 @@
 
 | Ticker | Close | Day % | RVOL20 | RSI14 | Score | Signal |
 |---|---:|---:|---:|---:|---:|---|
-| KLAC | 206.85 | -0.02% | 0.84 | 67.2 | 52 | WATCH |
-| ALAB | 362.34 | +3.43% | 0.79 | 61.6 | 60 | POSITIVE |
-| SPCX | 171.09 | +7.63% | 1.37 | 69.6 | 87 | STRONG PRICE/VOLUME |
-| TSLA | 378.73 | +2.20% | 1.14 | 58.8 | 66 | POSITIVE |
-| VRT | 253.62 | +0.57% | 0.81 | 49.8 | 15 | WEAK |
+| KLAC | 197.46 | -4.54% | 1.03 | 56.7 | 53 | WATCH |
+| ALAB | 389.80 | +7.58% | 1.58 | 67.7 | 95 | STRONG PRICE/VOLUME |
+| SPCX | 171.92 | +0.49% | 1.05 | 70.0 | 67 | POSITIVE |
+| TSLA | 380.68 | +0.51% | 0.77 | 59.6 | 67 | POSITIVE |
+| VRT | 253.14 | -0.19% | 0.79 | 49.5 | 15 | WEAK |
 
 ## Signal definitions
 
